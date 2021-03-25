@@ -37,7 +37,14 @@ const person = {
 //Extraer las URLs de facebook e instagram y renombrar las variables por fb e ig respectivamente
 
 let { facebook: fb, instagram: ig } = person.links.social
-console.log(`
+/* console.log(`
 Facebook: ${fb}
 Instagram: ${ig}
-`);
+`); */
+
+//Reto 03
+
+const createPhoneNumber = nums =>
+    `(${nums.splice(0, 3).join('')}) ${nums.splice(0, 3).join('')}-${nums.splice(0, 4).join('')}`;
+
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); // "(123) 456-7890"
